@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Josefin sans,Poppins*/
+
+*{
+  margin:0;
+  padding:0;
+  border-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  width:100%;
+  height:100vh;
+  background:#42445A;
+}
+/*Menu*/
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  height:80px;
+  background:linear-gradient(130deg,
+  #231F31,
+  #514D62,
+  #0D1E33);
+}
+header .logo{
+  width:50px;
+}
+header nav{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+header nav ul{
+  display:flex;
+  align-items:center;
+  list-style:none;
+}
+header nav ul li{
+  margin-left:15px;
+}
+header nav ul li:nth-child(1){
+  margin:0;
+}
+header nav ul li a{
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  font-size:1rem;
+  opacity:.9;
+  transition:.6s;
+}
+header nav ul li:hover > a{
+  opacity:1;
+  transform:scale(1.10);
+}
+.btn_sing_up{
+  padding:10px;
+  border:none;
+  background:#FB0000;
+  border-radius:10px;
+  color:#fff;
+  margin-left:15px;
+  font-weight:600;
+  box-shadow:3px 0px 20px red;
+  text-transform:uppercase;
+}
+.btn_sing_up:hover{
+  box-shadow:5px -2px 30px red;
+}
+/*resposivo do menu*/
+@media(max-width:850px){
+  header nav ul li a{
+    font-size:.8rem;
+  }
+}
+main{
+  width:100%;
+  height:100vh;
+}
+/*hero image*/
+.interface{
+  display:flex;
+}
+.hero{
+  display:flex;
+  width:100%;
+  height:40vh;
+  background:url('../imagensPublic/hero.jpeg');
+  background-size:cover;
+  background-position:center center;
+  z-index:-1;
+}
+.efeito-sombra{
+  position:absolute;
+  width:100%;
+  height:100vh;
+  background-image:linear-gradient(180deg,
+  transparent,
+  transparent,
+  black);
+  z-index:999;
+}
+.hero >  .txt{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:start;
+  align-items:center;
+  color:#fff;
+  margin:0px 20px;
+  text-shadow: 0px 0px 1px #42445A;
+  z-index:1000;
+}
+.hero > .txt > h1{
+  font-size:1.5rem;
+  margin:30px 0px;
+  font-weight:600;
+}
+.hero > .txt > p{
+  font-size:1rem;
+  margin-bottom:20px;
+}
+.historia{
+  width:100%;
+  height:40vh;
+}
+.historia > h1{
+  text-align:center;
+  margin:30px 0px;
+  color:white;
+  font-weight:600;
+}
+.historia > p{
+  color:white;
+  padding:20px;
+}
+@media(max-width:850px){
+  .interface{
+    flex-direction:column;
+  }
+  .hero{
+    height:100vh;
+  }
+  .hero > .txt > h1{
+    font-size:1.7rem;
+  }
+  .hero > .txt > p{
+    font-size:1rem;
+  }
+  .historia{
+    height:100vh
+  }
+}
+.text-h1{
+  text-align:center;
+  color:#fff;
+  margin:35px 0px;
+}
+.flex{
+  display:flex;
+  justify-content:space-around;
+  margin:20px 0px;
+}
+.flex div{
+  padding:20px;
+  text-align:center;
+}
+.flex > div > img{
+  width:270px;
+}
+.flex > div > p{
+  font-size:.8rem;
+  font-weight:600;
+  color:#A8AAB6;
+}
+@media(max-width:850px){
+  .flex{
+    flex-direction:column;
+  }
+}
+.sobre{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.sobre > div > img{
+  width:200px;
+  margin:20px 0px;
+}
+.sobre > div > h1{
+  color:white;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin:10px 0px;
+}
+.sobre > div.txt > p{
+  margin:10px 0px;
+}
+.sobre > div.txt{
+  padding:10px 40px;
+  color:#fff;
+}
+@media(max-width:850px){
+  .sobre{
+    flex-direction:column;
+  }
+}
+footer{
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  width:100%;
+  height:100px;
+  display:flex;
+  color:#fff;
+  flex-direction:column;
+  margin-top:20px;
+}
+footer > h2{
+  margin:20px 0px;
+  font-size:.8rem;
+}
+footer > hr{
+  width:80%;
+  border:solid #A8AAB6 1px;
+  margin-bottom:10px;
+}
+footer > p{
+  text-align:center;
+  color:red;
+  padding:20px 0px;
+}
+
+/*ScrollReveal animation*/
+.txt,.text-h1,.f,.p{
+  visibility:hidden;
+}
